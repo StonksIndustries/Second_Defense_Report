@@ -9,6 +9,7 @@
 \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{svg}
 \usepackage{tikz}
 \usepackage{eurosym}
 
@@ -31,19 +32,12 @@
 
 \newcommand{\gameName}{\textit{Lands of Azerith}}
 \newcommand{\companyName}{Stonks Industries}
-% \newcommand{\progressbar}[1]{
-%     \begin{tikzpicture}
-%         \fill[black!30] (0,0) rectangle (#1/100*2cm, 0.2);
-%         \draw (0,0) rectangle (2cm, 0.2);
-%     \end{tikzpicture}
-%     \small{#1\%}
-% }
 
 \title{
     Rapport de la seconde soutenance \\
     \textbf{\gameName} \\
     \vspace{0.5cm}
-    \includegraphics[width=5cm]{0.format/logo.png}
+    \includegraphics[width=5cm]{assets/logo.png}
     \vspace{4.2cm}
 }
 \author{
@@ -83,64 +77,41 @@
 \newpage
 \tableofcontents
 
+
 \newpage
 \section{Introduction}
-\subsection{Objectif de la soutenance et du projet}
-\input{0.format/introduction.tex}
-\subsection{Synopsis du jeu}
-\input{0.format/synopsys.tex}
-\subsection{Changements depuis la dernière soutenance}
-\input{0.format/changements}
-\subsection{Overview}
-
-
-
+\input{inputs/1.introduction.tex}
 
 \newpage
-\section{Deadlines et organisations}
+\section{Gestion des échéances et organisations} % TODO: Rename
+\input{inputs/2.orga.tex}
 
-\subsection{Organisation groupe}
-\input{0.format/orga.tex}
-\subsubsection{Communication}
-\input{0.format/communication}
-\subsubsection{Github comme outil collaboratif}
-\input{0.format/github.tex}
-\subsubsection{Reapartition des tâches}
-% \input{1.project/changes.tex}
+\newpage
+\section{Partie technique}
+\input{inputs/3.technique.tex}
 
-\subsection{Analyses et progrès}
-\subsubsection{Statut actuel}
-\subsubsection{Délais rencontrés et raisons}
-% \input{1.project/changes.tex}
+\newpage
+\section{Design et musique}
+\input{inputs/4.design.tex}
 
-\subsection{Partie technique}
-
-\subsection{Design et musique}
-\subsubsection{Inspiration du Design}
-\subsubsection{Création et implémentation}
-\subsubsection{Musique}
-
-\subsection{Site web}
-\subsubsection{Objectif du site web}
-
-\subsubsection{Developpement}
-\subsubsection{Apparence}
-\subsubsection{Responsive design}
-
-
+\newpage
+\section{Site web}
+\input{inputs/5.siteweb.tex}
 
 
 \newpage
 \section{Conclusion}
-\subsubsection{Recapitulatif}
-\subsubsection{Remerciements}
-% \input{0.format/conclusion.tex}
+\input{inputs/6.conclusion.tex}
 
 \section{Annexe}
+
+
+
+
 % Logo of the company
 \centering
 \vspace*{1.8cm}
-\includegraphics[width=3cm]{0.format/logo.png}
+\includegraphics[width=3cm]{assets/logo.png}
 
 % Day and time of the last update
 \vspace*{1cm}
