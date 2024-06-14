@@ -9,6 +9,7 @@
 \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{svg}
 \usepackage{tikz}
 \usepackage{eurosym}
 
@@ -31,19 +32,12 @@
 
 \newcommand{\gameName}{\textit{Lands of Azerith}}
 \newcommand{\companyName}{Stonks Industries}
-% \newcommand{\progressbar}[1]{
-%     \begin{tikzpicture}
-%         \fill[black!30] (0,0) rectangle (#1/100*2cm, 0.2);
-%         \draw (0,0) rectangle (2cm, 0.2);
-%     \end{tikzpicture}
-%     \small{#1\%}
-% }
 
 \title{
     Rapport de la seconde soutenance \\
     \textbf{\gameName} \\
     \vspace{0.5cm}
-    \includegraphics[width=5cm]{0.format/logo.png}
+    \includegraphics[width=5cm]{assets/logo.png}
     \vspace{4.2cm}
 }
 \author{
@@ -83,48 +77,41 @@
 \newpage
 \tableofcontents
 
+
 \newpage
 \section{Introduction}
-% \input{0.format/introduction.tex}
-
-
-\newpage
-\section{Le projet}
-
-\subsection{Changements depuis la dernière soutenance}
-% \input{1.project/changes.tex}
-
-\subsection{Site web}
-% \input{1.project/website.tex}
-
-\subsection{Cahier des Charges Technique}
-% \input{1.project/technical_book/technical_book.tex}
-
+\input{inputs/1.introduction.tex}
 
 \newpage
-\section{Le jeu}
+\section{Gestion des échéances et organisations} % TODO: Rename
+\input{inputs/2.orga.tex}
 
-\subsection{IA, Mécaniques de gameplay}
-% \input{2.game/gameplay.tex}
+\newpage
+\section{Partie technique}
+\input{inputs/3.technique.tex}
 
-\subsection{Design}
-% \input{2.game/design.tex}
+\newpage
+\section{Design et musique}
+\input{inputs/4.design.tex}
 
-\subsection{Histoire}
-% \input{2.game/story.tex}
-
-\subsection{Son et musique}
-% \input{2.game/sound.tex}
+\newpage
+\section{Site web}
+\input{inputs/5.siteweb.tex}
 
 
 \newpage
 \section{Conclusion}
-% \input{0.format/conclusion.tex}
+\input{inputs/6.conclusion.tex}
+
+\section{Annexe}
+
+
+
 
 % Logo of the company
 \centering
 \vspace*{1.8cm}
-\includegraphics[width=3cm]{0.format/logo.png}
+\includegraphics[width=3cm]{assets/logo.png}
 
 % Day and time of the last update
 \vspace*{1cm}
