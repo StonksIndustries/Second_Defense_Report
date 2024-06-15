@@ -1,20 +1,20 @@
+% Written by Louise Fussien
 
+% This file CAN NOT be compiled on its own
+% It is included by ../Book_of_Specifications.tex
 
 \subsubsection{Le Multijoueur}
 
 Pour pouvoir organiser une partie multijoueur, nous avons décidé d'utiliser l'API intégrée à Godot.
 Pour cela, il nous faut un serveur, ici l'hôte, ainsi que les joueurs qui rejoignent sa partie appelés les clients,
 En premier temps, l'hôte doit choisir quel port il souhaite utiliser pour sa partie, puis les joueurs doivent accéder à l'adresse de l'hôte, ainsi que le port précédemment choisi (cf Figure \ref{fig:gameplay1} et \ref*{fig:gameplay2}).
-
-
+\\
 
 Il est possible de jouer avec un nombre infini de joueurs, mais nous avons établi un maximum de 8, limite que nous utiliserons lors de la conception du reste du jeu.
 \\
 
 Maintenant que la connexion est établie entre les différents joueurs, il nous faut synchroniser leurs informations entre eux, tout en faisant attention à ne pas trop partager d'informations inutiles, pour limiter l'utilisation de bande passante.
 Par exemple, la synchronisation des positions de chacun entre tous les joueurs est importante, mais la position de la caméra d'un joueur n'est nécessaire qu'en local (c.f. Figures \ref*{fig:gameplay3} et \ref*{fig:gameplay4}).
-
-
 
 \subsubsection*{Déplacement et comportement des PNJ}
 
@@ -24,20 +24,25 @@ Pour commencer, chaque PNJ est dans l'état “\textit{Wander}”, c'est-à-dire
 
 Ensuite, le comportement d'une créature va brancher en quatre catégories distinctes :
 
-- Le PNJ Agressif va attaquer le joueur lorsqu'il est à proximité
+\begin{itemize}
 
-- Le PNJ Neutre ne va pas réagir au joueur lorsqu'il est à proximité, mais va répondre à ses attaques
+    \item Le PNJ Agressif va attaquer le joueur lorsqu'il est à proximité
+          \\
 
-- Le PNJ Passif ne va pas réagir au joueur lorsqu'il est à proximité, mais va fuir s'il est attaqué
+    \item - Le PNJ Neutre ne va pas réagir au joueur lorsqu'il est à proximité, mais va répondre à ses attaques
+          \\
 
-- Le PNJ Peureux va fuir lorsqu'il est à proximité du joueur.
-\\
+    \item - Le PNJ Passif ne va pas réagir au joueur lorsqu'il est à proximité, mais va fuir s'il est attaqué
+          \\
+
+    \item - Le PNJ Peureux va fuir lorsqu'il est à proximité du joueur.
+          \\
+
+\end{itemize}
 
 Pour la détection du joueur, nous allons utiliser la fonctionnalité des signaux de Godot, et initier deux zones de détection circulaire autour de chaque monstre.
 La première servira à détecter lorsque le joueur rentre dans cette zone (zone d'aggro), et la deuxième, un peu plus grande, qui détectera la sortie du joueur de cette zone (zone de déaggro), et qui repassera le PNJ dans l'état \textit{Wander}.
 On ne veut pas qu'il fuit ou qu'il attaque le joueur pendant toute la durée de la partie (c.f. Figure \ref*{fig:gameplay6}).
-
-
 
 \subsubsection*{Les quêtes, les classes, l'inventaire et la sauvegarde}
 
@@ -46,8 +51,3 @@ Nous nous sommes concentrés sur l'implémentation du multijoueur ainsi que d'un
 
 Nous avons donc prévu à la suite de cette soutenance de terminer le comportement des PNJ, puis de poursuivre sur le fonctionnement de la sauvegarde de données, ainsi que les classes de joueurs, les quêtes et l'inventaire.
 
-\subsection{Multijouer}
-\subsection{Multijouer}
-\subsection{Multijouer}
-\subsection{Multijouer}
-\subsection{Multijouer}
