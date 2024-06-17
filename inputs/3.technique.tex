@@ -3,7 +3,7 @@
 % This file CAN NOT be compiled on its own
 % It is included by ../Book_of_Specifications.tex
 
-\subsubsection{Le Multijoueur}
+\subsection{Le Multijoueur}
 
 Pour pouvoir organiser une partie multijoueur, nous avons décidé d'utiliser l'API intégrée à Godot.
 Pour cela, il nous faut un serveur, ici l'hôte, ainsi que les joueurs qui rejoignent sa partie appelés les clients,
@@ -16,7 +16,7 @@ Il est possible de jouer avec un nombre infini de joueurs, mais nous avons étab
 Maintenant que la connexion est établie entre les différents joueurs, il nous faut synchroniser leurs informations entre eux, tout en faisant attention à ne pas trop partager d'informations inutiles, pour limiter l'utilisation de bande passante.
 Par exemple, la synchronisation des positions de chacun entre tous les joueurs est importante, mais la position de la caméra d'un joueur n'est nécessaire qu'en local (c.f. Figures \ref*{fig:gameplay3} et \ref*{fig:gameplay4}).
 
-\subsubsection*{Déplacement et comportement des PNJ}
+\subsection{Déplacement et comportement des PNJ}
 
 Au cours des aventures de nos joueurs, ceux-ci rencontreront des monstres et animaux, passifs ou agressifs.
 Il nous faut donc implémenter ces différents comportements.
@@ -44,7 +44,7 @@ Pour la détection du joueur, nous allons utiliser la fonctionnalité des signau
 La première servira à détecter lorsque le joueur rentre dans cette zone (zone d'aggro), et la deuxième, un peu plus grande, qui détectera la sortie du joueur de cette zone (zone de déaggro), et qui repassera le PNJ dans l'état \textit{Wander}.
 On ne veut pas qu'il fuit ou qu'il attaque le joueur pendant toute la durée de la partie (c.f. Figure \ref*{fig:gameplay6}).
 
-\subsubsection*{Les quêtes, les classes, l'inventaire et la sauvegarde}
+\subsection{Les quêtes, les classes, l'inventaire et la sauvegarde}
 
 Nous nous sommes concentrés sur l'implémentation du multijoueur ainsi que d'une partie de l'IA des PNJ, car nous pensons que pour pouvoir intégrer plus de contenu, il nous faut une base solide, ainsi qu'une bonne compréhension du fonctionnement de jeu en multijoueur.
 \\

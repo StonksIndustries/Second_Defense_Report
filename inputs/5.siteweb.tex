@@ -3,13 +3,13 @@
 % This file CAN NOT be compiled on its own
 % It is included by ../Book_of_Specifications.tex
 
-\subsubsection{Objectif du site web}
+\subsection{Objectif du site web}
 
 Le site web est une tâche secondaire du projet, mais il est tout de même important pour la communication et la promotion du jeu.
 Il est essentiel pour permettre aux joueurs de découvrir le jeu, de suivre son développement et de le télécharger.
 C'est l'outils central de la partie communication du projet, et il est donc important de le maintenir à jour avec les dernières informations sur le jeu.
 
-\subsubsection{Développement}
+\subsection{Développement}
 
 Le site possède son propre dépôt de code source sur GitHub à l'adresse \url{https://github.com/StonksIndustries/Azerith_Website}.
 Nous avons utilisé l'éditeur de code VSCode pour développer le site web car il offre de nombreux outils très utiles pour cela.
@@ -27,7 +27,7 @@ Il sera automatiquement compilé et publié grâce aux outils GitHub Actions et 
 L'usage de ces outils permet de simplifier la publication du site web, et de le mettre à jour automatiquement à chaque modification du code source.
 Chaque nouvelle versions envoyés par un développeur est automatiquement compilée et publiée sur le site web si aucune erreur n'est détectée.
 
-\subsubsection{Apparence}
+\subsection{Apparence}
 
 \begin{figure}[H]
     \centering
@@ -40,17 +40,24 @@ Comme le montre la Figure \ref*{fig:website1}, le site web est simple et épuré
 Il est composé d'une seule page, laissant l'utilisateur scroller pour découvrir les différentes sections.
 Elle possède un menu de navigation qui permet de se rendre directement aux sections les plus importantes du site web, et un pied de page avec des liens vers les réseaux sociaux et le dépôt de code source du jeu.
 Les différentes sections sont les suivantes :
-
-- "À propos", cette partie présente le jeu, son style et le concept associé
 \\
 
-- "Téléchargement", pour télécharger le jeu pour les différentes plateformes
-\\
+\begin{itemize}
 
-- "Contact", pour contacter l'équipe de développement en redirigeant l'utilisateur vers une adresse mail ou le dépôt GitHub du projet
-\\
+    \item "À propos", cette partie présente le jeu, son style et le concept associé
+          \\
 
-\subsubsection{Responsive design}
+    \item "Téléchargement", pour télécharger le jeu pour les différentes plateformes
+          \\
+
+    \item "L'équipe", qui présente les membres du groupe de développement de \gameName
+          \\
+
+    \item "Contact", pour contacter l'équipe de développement en redirigeant l'utilisateur vers une adresse mail ou le dépôt GitHub du projet
+
+\end{itemize}
+
+\subsection{Responsive design}
 
 La plus importante amélioration du site web depuis la dernière soutenance est l'ajout du responsive design.
 Le site web est maintenant compatible avec les appareils mobiles, et s'adapte automatiquement à la taille de l'écran de l'utilisateur.
@@ -66,3 +73,4 @@ Aujourd'hui, la majorité des utilisateurs naviguent sur internet depuis leur sm
 Pour réaliser cette amélioration, nous avons utilisé les \textit{media queries} de CSS pour adapter le site web à différentes tailles d'écran.
 La Figure \ref*{fig:website2} montre un exemple utilisant cette fonctionnalités du langage CSS.
 La première ligne définit le style lorsque la largeur de l'écran est inférieure à 750 pixels, tandis que la deuxième ligne définit le style pour les orientations paysage.
+
