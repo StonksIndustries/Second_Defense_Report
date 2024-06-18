@@ -10,7 +10,9 @@
         "gameplay",
         "Museux",
         "Pasquier",
-        "Smurfcats"
+        "pathfinding",
+        "Smurfcats",
+        "tilesets"
     ],
     "todo-tree.tree.scanMode": "workspace only",
     "cSpell.language": "fr,fr-FR,en,en-US,lorem",
