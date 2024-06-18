@@ -65,8 +65,16 @@ nous avons entrepris une étude approfondie de JSON et de ses applications dans 
 \subsection*{Structure et Syntaxe de JSON}
 JSON représente des données sous forme de paires clé/valeur et de tableaux. Une paire clé/valeur se compose d'un nom de champ (clé) et de sa valeur associée. 
 Les valeurs peuvent être des chaînes de caractères, des nombres, des objets (des paires clé/valeur imbriquées), des tableaux, des booléens (true/false), ou null.
+\\
 
 Exemple de structure JSON : 
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{assets/jsonexemple.png}
+      
+      \label{fig:json}
+  \end{figure}
 
 L'intégration de fichiers JSON dans notre code s'est révélée être un défi considérable mais stimulant. 
 Voici un aperçu détaillé du processus et des solutions mises en œuvre pour surmonter les obstacles techniques :
@@ -197,7 +205,15 @@ L'architecture d'un projet de développement de jeux vidéo est essentielle pour
       Chaque plan est un sprite ou une texture avec une image unique et est déplacé à une vitesse différente par rapport aux autres plans pour simuler la perspective.
       \\
 
-      Exemple de structure de la node ParallaxBackground : % inserer image
+      Exemple de structure de la node ParallaxBackground :
+      \\
+
+      \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{assets/paralax.png}
+            
+            \label{fig:website1}
+        \end{figure}
 
       \subsubsection*{Animation et Effet Visuel}
       Chaque plan de fond est animé en ajustant sa position horizontale à chaque trame (frame) du jeu, en fonction de sa vitesse définie.
@@ -218,7 +234,6 @@ L'architecture d'un projet de développement de jeux vidéo est essentielle pour
       Par exemple, la synchronisation des positions de chacun entre tous les joueurs est importante, 
       mais la position de la caméra d'un joueur n'est nécessaire qu'en local (c.f. Figures \ref*{fig:gameplay3} et \ref*{fig:gameplay4}).
 
-      %mettre des photos
 
       \subsubsection*{Système de Connexion Multi-joueurs via Envoi de Paquets}
       Pour permettre une connectivité multi-joueurs fluide et intuitive, nous avons implémenté un système de gestion de serveur 
@@ -368,7 +383,12 @@ L'architecture d'un projet de développement de jeux vidéo est essentielle pour
       Chaque classe de monstre gère de manière dynamique son comportement en réponse aux signaux émis par Area2D. 
 
 
-      Voici un exemple simplifié de la logique implémentée en Godot :%inserer image
+      \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{assets/mob.png}
+            \caption{Exemple du signal émis par le mob}
+            \label{fig:website1}
+        \end{figure}
 
 
 
@@ -456,7 +476,7 @@ les objets collectés et leur quantité respective.
     leurs besoins. Par exemple, les objets peuvent être équipés, consommés ou échangés selon leur utilité dans le jeu.
 \end{itemize}
 
-
+gameN
 
 
 \subsection{Gestion des Points de Vie, Checkpoints et Loot dans le Jeu}
@@ -534,6 +554,14 @@ Chaque tile représente une partie spécifique de la carte, telle que le sol et 
 Les tilesets sont des images contenant plusieurs textures utilisées pour les maps. Ils permettent de définir les décors,
  les détails du sol et d'autres éléments fixes qui ne changent pas pendant le jeu. Cela garantit une cohérence visuelle et simplifie
   la gestion des textures dans l'environnement du jeu.
+
+
+  \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{assets/tileset.png}
+      \caption{Nos textures}
+      \label{fig:website1}
+  \end{figure}
 
 \section*{Gestion des Transitions entre les Maps}
 
