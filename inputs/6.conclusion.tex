@@ -24,13 +24,74 @@ efficace malgré les défis liés aux départs de membres et à l'intégration d
 \\
 
 La dynamique de notre équipe a connu plusieurs bouleversements.
-Le départ d'Alexandre Cohen et de Mohamed Aziz ben Amor a été compensé par l'arrivée de Louise Fussien, qui a apporté une nouvelle énergie et des compétences cruciales. L'utilisation de Discord pour la communication instantanée et des réunions en personne à EPITA a renforcé notre cohésion et notre capacité à résoudre les problèmes rapidement.
+Le départ d'Alexandre Colsch et de Mohamed Aziz ben Amor a été compensé par l'arrivée de Louise Fussien, qui a apporté une nouvelle énergie et des compétences cruciales. L'utilisation de Discord pour la communication instantanée et des réunions en personne à EPITA a renforcé notre cohésion et notre capacité à résoudre les problèmes rapidement.
 La répartition des tâches a été ajustée pour tirer le meilleur parti des compétences de chaque membre, garantissant une progression constante malgré les obstacles.
 \\
 
-Partie technique recap
+L'environnement de travail, dans le contexte du projet de développement de jeux vidéo, est caractérisé par l'utilisation du moteur de jeu Godot et de l'environnement de
+ développement intégré (IDE) Rider. Godot, un moteur de jeu open-source, est reconnu pour sa facilité d'utilisation et sa capacité à gérer des projets de jeux vidéo en 2D et 
+ en 3D. L'adoption de Godot a été motivée par sa communauté active et ses ressources abondantes, qui facilitent l'apprentissage et la résolution de problèmes. En parallèle,
+  Rider, un IDE multiplateforme développé par JetBrains, a été choisi pour ses fonctionnalités étendues de support de langages de programmation, en particulier C\#.
+   L'intégration de Godot avec Rider a permis d'exploiter pleinement les capacités de scripting C\# de Godot, offrant ainsi une expérience de développement plus 
+   enrichissante et productive.
+   \\
 
+Cependant, le développement n'a pas été exempt de défis, notamment ceux liés aux changements de version de Godot. Comme le moteur est en constante évolution, 
+les mises à jour fréquentes, bien que bénéfiques en termes de nouvelles fonctionnalités et d'améliorations de performance, peuvent introduire des modifications 
+significatives qui impactent la compatibilité du code existant. Pour surmonter ces difficultés, l'équipe a mis en place plusieurs stratégies, telles que des sessions de
+ formation interne, la création d'un environnement de test pour évaluer l'impact des changements sur le projet, et l'encouragement à la révision de code et au pair programming.
+La manipulation des fichiers JSON a également été un aspect essentiel du projet. JSON, un format de données léger, a été largement utilisé pour stocker et échanger 
+des données structurées. En dépit des défis initiaux liés à la familiarité avec ce format de fichier, l'équipe a mené une étude approfondie de JSON et de ses applications. 
+Le processus d'intégration de fichiers JSON dans le code a impliqué la lecture et l'écriture de fichiers JSON, la sélection des attributs à sauvegarder, et la récupération 
+des objets à partir de fichiers JSON.
+\\
+
+En ce qui concerne l'architecture du jeu, l'organisation claire et la gestion efficace des ressources ont été facilitées par une structure de dossiers bien définie. 
+Le jeu vidéo s'est appuyé sur divers dossiers, notamment Assets pour les ressources visuelles et sonores, Caractères pour les images des personnages, 
+Items pour les fichiers JSON associés aux différents objets, et Loottables pour les données de niveau de détail des monstres.
+\\
+
+Dès l'ouverture du menu, l'effet parallax enchante visuellement en animant différents plans à des vitesses distinctes,
+ créant ainsi une profondeur saisissante. Cette technique, intégrée de manière astucieuse grâce à Godot, plonge les joueurs dans une perspective 2D 
+ vivante dès le premier instant.
+\\
+
+En parallèle, notre approche du multijoueur repose sur une architecture robuste basée sur l'envoi de paquets, simplifiant 
+la connexion et la synchronisation entre les joueurs sans compromettre la fluidité du gameplay. Cette solution permet à jusqu'à huit joueurs 
+de se connecter sans tracas, chacun pouvant rejoindre une partie en utilisant un système intuitif sans avoir à saisir manuellement des adresses IP.
+\\
+
+Les contrôles du jeu sont pensés pour une jouabilité intuitive : de simples touches comme Z, Q, S, D pour les déplacements, Maj pour la course,
+ et Tab pour l'inventaire assurent une navigation fluide dans les environnements variés du jeu. De plus, des actions spécifiques comme l'interaction 
+ avec le clic gauche de la souris sont finement intégrées pour une expérience utilisateur enrichie.
+\\
+
+L'intelligence artificielle des monstres apporte une autre dimension au jeu, avec des comportements variés (agressif, neutre, passif, peureux) qui 
+réagissent dynamiquement aux actions des joueurs. Chaque type de monstre est méticuleusement conçu pour enrichir l'interaction, utilisant des mécanismes
+ de détection de collision et de gestion de signaux pour ajuster leur comportement en temps réel.
+\\
+
+
+
+ L'intégration des mécanismes avancés comme la navigation A* pour le déplacement des monstres, la gestion détaillée de l'inventaire du joueur, et la 
+ création dynamique de maps avec transitions fluides dans notre jeu sous Godot représente un effort significatif pour offrir une expérience de jeu
+  immersive et engageante. Chaque élément technique, qu'il s'agisse de l'algorithme de pathfinding A* pour des déplacements intelligents, 
+ de la gestion des objets collectés via un inventaire structuré, ou encore de l'animation fluide des 
+ personnages et des environnements, contribue à créer un monde virtuel cohérent et captivant pour les joueurs.
+\\
+
+ L'utilisation de tilesets et de textures bien intégrées garantit non seulement une esthétique visuelle agréable 
+ mais aussi une navigation fluide entre les différents environnements du jeu. Les transitions entre les maps sont gérées
+  avec précision, offrant une immersion sans heurts tandis que les personnages et les monstres animés ajoutent une dimension réaliste et interactive à l'expérience de jeu.
+ \\
+
+ En combinant ces aspects techniques avec une mécanique de jeu bien pensée incluant des checkpoints pour la progression du joueur et une mécanique de loot gratifiante 
+ à partir des monstres vaincus, notre jeu vise à captiver les joueurs tout en leur offrant un défi stratégique et une exploration enrichissante. En définitive, cette
+  approche technique avancée sous Godot non seulement améliore la jouabilité mais aussi renforce l'immersion et le plaisir des joueurs, faisant de chaque session de jeu une 
+  expérience mémorable et divertissante.
 L'aspect visuel et sonore de "Lands of Azerith" a été élaboré avec soin pour immerger les joueurs dans notre univers.
+\\
+
 Nous avons puisé notre inspiration dans diverses sources pour créer un design original et attrayant.
 L'intégration du son, des effets visuels, et une interface utilisateur intuitive ont été des éléments clés pour enrichir l'expérience de jeu.
 Le site web du projet a également été développé pour offrir une vitrine de notre travail, facilitant l'accès à des informations sur le jeu et son développement.
@@ -42,47 +103,76 @@ envers la qualité du projet. Chaque itération de notre cahier technique a ét�
 restions alignés sur nos objectifs initiaux tout en intégrant de nouvelles idées et solutions.
 \\
 
+\subsection{Les joies et les peines}
+
+Le chemin parcouru pour mener à bien notre projet a été parsemé de défis et de moments gratifiants, marquant une expérience enrichissante où la gestion du 
+temps et des ressources humaines a été cruciale. Voici un récit des hauts et des bas que nous avons traversés ensemble.
+\\
+
+Défis Rencontrés :
+
+Gérer à la fois les études et le projet simultanément a été une tâche ardue. Trouver des plages horaires communes pour travailler efficacement a souvent
+ représenté un défi majeur, surtout avec les contraintes personnelles et académiques de chacun. Le départ de deux membres du groupe, Momo et Alex, 
+ a également constitué un coup dur, nécessitant un réajustement rapide pour maintenir le cap du projet.
+\\
+
+Adaptation et Résilience
+
+L'arrivée de Louise dans notre équipe a été une bouffée d'air frais. Sa contribution a apporté de nouvelles idées et une énergie positive, renforçant 
+notre capacité à relever les défis restants. Ce changement a été une occasion précieuse pour apprendre à gérer efficacement les transitions d'équipe 
+tout en maintenant la cohésion et la productivité.
+\\
+
+Apprentissage de la Gestion du Temps et du Groupe
+
+Naviguer à travers ces dynamiques de groupe nous a offert une expérience précieuse dans la gestion du temps et des ressources humaines. Apprendre à 
+coordonner les efforts, à déléguer les tâches et à maintenir une communication claire a été essentiel pour atteindre nos objectifs collectifs. Cette 
+expérience nous a préparés de manière significative à l'environnement dynamique et collaboratif de l'entreprise.
+\\
+
+Satisfaction dans la Conformité aux Attentes
+
+Finalement, livrer un projet qui répond aux attentes fixées représente une grande satisfaction. Cela démontre notre capacité à transformer des défis 
+en opportunités, à faire preuve de résilience face aux obstacles et à atteindre des résultats de qualité. Cette réalisation renforce notre confiance et 
+notre préparation pour les défis futurs, tant sur le plan académique que professionnel.
+
+
 \subsection{Remerciements}
 
-Nous tenons à exprimer notre gratitude envers tous ceux qui nous ont soutenus tout au long de ce projet.
-Nos professeurs et encadrants à l'EPITA ont été des sources inestimables de conseils et de motivation.
-Nous remercions également nos familles et amis pour leur soutien moral et leur patience durant les périodes intenses de développement.
+
+
+À ceux qui, par leur soutien et leur guidance, ont éclairé notre chemin tout au long de ce projet ambitieux, nous adressons nos remerciements sincères
+ et empreints de reconnaissance. À nos mentors et encadrants de l'EPITA, vous avez été bien plus que des guides : des conseillers précieux dont la sagacité 
+ a éclairé nos démarches et nourri nos réflexions. Vos encouragements et vos conseils ont été les pivots sur lesquels s'est articulée notre entreprise, et sans votre
+  expertise, notre parcours aurait été semé d'embûches insurmontables.
 \\
 
-Enfin, nous reconnaissons l'importance des ressources open-source et des communautés de développeurs qui ont contribué indirectement à la réussite de notre projet.
-Nous sommes profondément reconnaissants envers ces contributeurs qui ont généreusement partagé leurs connaissances, leurs outils et leur expertise.
-Leur contribution a été essentielle pour nous permettre d'aller plus loin dans notre développement et d'atteindre nos objectifs ambitieux.
+À nos proches, familles et amis, nous exprimons notre profonde gratitude pour votre soutien indéfectible. Votre patience et votre compréhension durant 
+les périodes intenses de développement ont été notre bouclier contre les vents contraires. Chaque succès que nous célébrons aujourd'hui porte l'empreinte 
+de votre affection et de votre encouragement constant.
 \\
 
-La richesse des ressources open-source disponibles nous a permis d'accéder à des bibliothèques de code, des frameworks et des outils puissants qui ont grandement facilité notre travail.
-Nous avons pu bénéficier de solutions éprouvées et de bonnes pratiques établies par la communauté des développeurs, ce qui nous a fait gagner un temps précieux et nous a évité de réinventer la roue.
+Nous ne saurions également passer sous silence l'importance cruciale des ressources open-source et des communautés de développeurs qui ont enrichi notre expérience.
+ Par leur générosité et leur partage de connaissances, ces précieux collaborateurs ont illuminé notre chemin, offrant des solutions éprouvées et des perspectives 
+ nouvelles qui ont enrichi notre approche du développement.
 \\
 
-De plus, les communautés de développeurs ont été une source inépuisable de soutien et d'inspiration.
-Nous avons pu poser des questions, partager nos idées et obtenir des conseils précieux de personnes passionnées et expérimentées.
-Leur expertise et leur volonté de partager leurs connaissances ont été une véritable bouffée d'air frais dans notre parcours de développement.
+Les forums de discussion et les plateformes de partage de code ont été des carrefours d'échange essentiels, où chaque question technique trouvait réponse et chaque
+ idée trouvait écho. La richesse de ces interactions a été pour nous une source constante d'inspiration et de résolution de problèmes, permettant à notre projet de
+  croître et de s'épanouir au-delà de nos attentes initiales.
 \\
 
-Nous tenons également à souligner l'importance des forums de discussion, des plateformes de partage de code et des sites de documentation en ligne.
-Ces ressources ont été des sources inestimables d'informations techniques, de tutoriels détaillés et de réponses à nos problèmes spécifiques.
-Grâce à ces plateformes, nous avons pu surmonter des obstacles techniques, acquérir de nouvelles compétences et élargir notre compréhension du développement de jeux vidéo.
+Enfin, nous tenons à exprimer notre profonde reconnaissance envers les développeurs dédiés qui ont créé et maintenu les outils open-source que nous avons utilisés.
+ Leur dévouement et leur expertise ont été des piliers essentiels de la fiabilité et de la qualité de notre travail. Leur contribution silencieuse mais indispensable 
+ a façonné notre succès et notre satisfaction aujourd'hui.
 \\
 
-Enfin, nous voulons exprimer notre gratitude envers les développeurs qui ont créé et maintenu les outils open-source que nous avons utilisés. Leur travail acharné, leur dévouement et leur passion ont contribué à la qualité et à la fiabilité de ces outils.
-Nous sommes conscients que sans leur contribution, notre projet aurait été beaucoup plus difficile à réaliser.
+En conclusion, "Lands of Azerith" incarne bien plus qu'un simple projet académique. Il symbolise notre engagement commun envers l'innovation et la création, ainsi 
+que notre capacité à surmonter les défis avec ingéniosité et persévérance. Que notre gratitude résonne comme une reconnaissance profonde envers tous ceux qui ont 
+contribué, directement ou indirectement, à la réalisation de cette œuvre collective.
 \\
 
-En conclusion, nous reconnaissons l'importance des ressources open-source et des communautés de développeurs dans notre parcours de développement.
-Nous sommes profondément reconnaissants envers tous ceux qui ont contribué indirectement à notre projet, que ce soit par le partage de code, la réponse à des questions techniques, ou l'inspiration créative.
+Avec respect et reconnaissance,
 \\
 
-Le développement de "Lands of Azerith" ne s'arrête pas à l'acte 1.
-Nous envisageons de poursuivre notre travail en développant les actes suivants, en enrichissant l'histoire et les mécaniques de jeu.
-Les retours des utilisateurs seront essentiels pour guider nos améliorations et expansions futures.
-Notre expérience de cette année nous a équipé des compétences et de la confiance nécessaires pour aborder ces défis avec enthousiasme et détermination.
-\\
-
-En conclusion, "Lands of Azerith" est bien plus qu'un simple projet académique.
-C'est une réalisation collective qui témoigne de notre passion pour le développement de jeux vidéo, notre capacité à collaborer efficacement, et notre résilience face aux défis.
-Nous espérons que ce jeu apportera autant de plaisir aux joueurs qu'il nous en a apporté lors de sa création.
-Merci à tous ceux qui ont rendu cette aventure possible.
+Ayemane Bouarbi, Louise Fussien, Michaël Museux, Martin Pasquier
