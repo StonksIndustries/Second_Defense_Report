@@ -1,0 +1,78 @@
+% This file CAN be compiled on its own
+% Its output is included into the Google Sheet
+
+
+\documentclass[border=2 3]{standalone}
+
+\usepackage{pgfgantt}
+
+\usepackage{geometry}
+
+\geometry{margin=2.5cm}
+
+\begin{document}
+\centering
+  \begin{ganttchart}[
+    hgrid,
+    vgrid,
+    % Today paramaters
+    % today=17,
+    % today rule/.style={blue},
+    group left shift=0,
+    group right shift=0,
+    group peaks tip position=0,
+    group height=.3,
+    x unit=0.6cm,
+    y unit chart=0.7cm,
+    bar/.append style={fill=green!50}, 
+    ]{1}{18}
+    \gantttitlelist{"Oct.", "Nov.", "Dec.", "Janv.", "Fevr", "Mars", "Avril", "Mai", "Juin"}{2} \\
+    
+    % \ganttgroup{Concept}{1}{4} \\
+    \ganttbar[progress=100]{Cahier des charges}{1}{2} \\
+    \ganttbar[progress=100]{Recherche du concept}{1}{2} \\
+    \ganttbar[progress=100]{\'Ecriture du scnénario}{3}{4} \\  
+    \ganttnewline
+    
+    % \ganttgroup{Design}{5}{10} \\
+    \ganttbar[progress=100]{Design des textures}{4}{12} \\
+    \ganttbar[progress=100]{Integration dans godot}{9}{15} \\
+    \ganttbar[progress=100]{Validation}{11}{13} \\
+    \ganttnewline
+    
+    % \ganttgroup{Programmation du jeu}{9}{14} \\
+    \ganttbar[progress=100]{Premiers tests sur Godot}{5}{7} \\
+    \ganttbar[progress=100]{Développement}{6}{17} \\
+    \ganttbar[progress=100]{Réseau}{6}{12} \\
+    \ganttbar[progress=100]{IA}{12}{13} \\
+    \ganttbar[progress=100]{Phase de débug / corection}{16}{17} \\
+    \ganttnewline
+    
+    % \ganttgroup{Site web}{5}{8} \\
+    \ganttbar[progress=100]{Design du site web}{6}{7} \\
+    \ganttbar[progress=100]{Développement}{7}{14} \\
+    \ganttbar[progress=100]{Phase de débug / corection}{15}{15} \\
+    \ganttnewline
+    \ganttvrule[
+      % Soutenance orale : 22 janvier 2024
+      vrule/.append style={red, thin},
+      vrule offset=.2,01
+      vrule label node/.append style={anchor=north west}
+      ]{Oral}{8}
+      \ganttvrule[
+        % Soutenance 1 : 18 mars 2024
+        vrule/.append style={red, thin},
+      vrule offset=.2,01
+      vrule label node/.append style={anchor=north west}
+      ]{Soutenance 1}{12}
+      \ganttvrule[
+        % Soutenance 2 : 17 juin 2024
+        vrule/.append style={red, thin},
+        vrule offset=.2,01
+        vrule label node/.append style={anchor=north west}
+        ]{Soutenance 2}{18}
+        
+      \end{ganttchart}
+
+    
+    \end{document}
